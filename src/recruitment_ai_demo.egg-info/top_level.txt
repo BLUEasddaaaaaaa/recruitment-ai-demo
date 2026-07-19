@@ -1,0 +1,10 @@
+__init__
+ai
+api
+app
+config
+db
+documents
+domain
+services
+ui
