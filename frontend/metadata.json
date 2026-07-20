@@ -1,0 +1,6 @@
+{
+  "name": "AI 招聘工作台",
+  "description": "专业的企业级 AI 招聘运营工作台，支持简历智能解析预填、候选人全流程生命周期管理，以及 AI 运营待办、洞察与一键汇报生成功能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

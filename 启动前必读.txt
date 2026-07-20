@@ -1,0 +1,47 @@
+【启动前必读】
+
+1. 双击运行前
+   如果你是 macOS 用户，首次双击“启动完整招聘AI-Demo.command”时，系统可能会提示：
+   “Apple 无法验证…是否包含可能危害Mac安全或泄漏隐私的恶意软件。”
+
+   这是因为 .command 脚本没有苹果开发者签名，属于 macOS Gatekeeper 安全机制，不是文件真的有问题。
+
+2. 解决方法（任选一种）
+
+   方法 A：右键打开（最简单）
+   1) 按住键盘 Control 键，点一下“启动完整招聘AI-Demo.command”
+   2) 选择“打开”
+   3) 在弹窗中点击“仍要打开”
+   4) 之后就可以正常双击运行了
+
+   方法 B：用终端移除隔离标记（推荐）
+   打开“终端（Terminal）”应用，复制下面整行命令，粘贴后按回车：
+
+      xattr -d com.apple.quarantine "/path/to/你的文件夹/启动完整招聘AI-Demo.command"
+
+   例如：
+
+      xattr -d com.apple.quarantine "/Users/你的用户名/Downloads/recruitment-ai-demo/启动完整招聘AI-Demo.command"
+
+   如果提示“Operation not permitted”，请去：
+   系统设置 → 隐私与安全性 → 完全磁盘访问权限
+   把“终端（Terminal）”加入并开启开关，然后重新执行上面的命令。
+
+   方法 C：直接通过终端运行
+   打开终端，复制下面命令并运行：
+
+      zsh "/path/to/你的文件夹/启动完整招聘AI-Demo.command"
+
+   例如：
+
+      zsh "/Users/你的用户名/Downloads/recruitment-ai-demo/启动完整招聘AI-Demo.command"
+
+3. 首次启动说明
+   第一次运行脚本会自动创建 Python 虚拟环境、安装前后端依赖，这个过程大约需要 30–60 秒。
+   请耐心等待，不要关闭终端窗口。看到“打开前端页面：http://localhost:3000”才算启动完成。
+
+4. 不想本地运行？
+   可以直接打开在线预览地址（无需安装任何环境）：
+   https://b7cd2e6fa96b401cb84c95256973c33b.app.codebuddy.work
+
+   在线预览是静态演示页，已内置示例数据，手机和电脑都能直接打开。
